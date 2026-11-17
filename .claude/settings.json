@@ -1,0 +1,20 @@
+{
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "node \"${CLAUDE_PROJECT_DIR:-.}/.claude/scripts/specs.mjs\" statusline",
+    "refreshInterval": 10
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/.claude/scripts/specs.mjs\" hook"
+          }
+        ]
+      }
+    ]
+  }
+}
